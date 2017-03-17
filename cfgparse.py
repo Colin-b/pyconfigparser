@@ -1,3 +1,24 @@
+try:
+    # Python 3
+    from configparser import ConfigParser
+except ImportError:
+    # Python 2
+    from ConfigParser import ConfigParser
+    
+def load_config(file_path):
+    """
+    Load configuration parser from ini file.
+    Throw an Exception if file cannot be found.
+    
+    :param file_path: string path to the configuration ini file.
+    :return: ConfigParser instance.
+    """
+    config_parser = ConfigParser()
+    if not config_parser.read(file_path):
+        raise Exception('Configuration file "{0}" cannot be found.'.format(file_path))
+    return config_parser
+
+
 def get_item(config, section, key):
     """
     Return property value or throw an Exception if it cannot be found.

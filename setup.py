@@ -5,7 +5,7 @@ this_dir = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_dir, 'README.md'), 'r') as f:
     long_description = f.read()
 
-setup(name='boa',
+setup(name='pyconfigparser',
       version='0.1',
       author='Bounouar Colin',
       maintainer='Bounouar Colin',

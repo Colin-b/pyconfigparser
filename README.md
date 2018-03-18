@@ -10,8 +10,10 @@ To read the following configuration file named `configuration.ini`:
 
 You can use the following code:
 
-    import cfgparse
+```python
+import cfgparse
 
-    config = cfgparse.load_config('configuration.ini')
-    mandatory_value = cfgparse.get_item(config, 'section', 'mandatory_property')
-    optional_value = cfgparse.get_item(config, 'section', 'optional_property', 'default_value')
+config = cfgparse.load_config('configuration.ini')
+mandatory_value = cfgparse.get_item(config, 'section', 'mandatory_property')
+optional_value = cfgparse.get_item(config, 'section', 'optional_property', 'default_value')
+```

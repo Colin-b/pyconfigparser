@@ -14,4 +14,4 @@ You can use the following code:
 
     config = cfgparse.load_config('configuration.ini')
     mandatory_value = cfgparse.get_item(config, 'section', 'mandatory_property')
-    optional_value = cfgparse.get_item_default(config, 'section', 'optional_property', 'default_value')
+    optional_value = cfgparse.get_item(config, 'section', 'optional_property', 'default_value')
